@@ -169,6 +169,18 @@ body {
     padding: 8px;
     gap: 8px;
     color: #1DBDC5;
+    cursor: pointer;
+}
+#top-app-bar .nav-groups .end-div-group .login-signup-button.logged-in {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    background-color: #CCE8E9;
 }
 
 .material-symbols-outlined {
@@ -218,4 +230,15 @@ body {
 .account-circle{
     box-sizing: content-box;
     color: #041F21;
+}
+
+.profile-img{
+    border-radius: 39px;
+    height: 38px;
+    width: 38px;
+}
+
+.login-realign{
+    justify-content: flex-end;
+    margin-right: 24px;
 }
