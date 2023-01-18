@@ -170,6 +170,7 @@ body {
     gap: 8px;
     color: #1DBDC5;
     cursor: pointer;
+    position: relative;
 }
 #top-app-bar .nav-groups .end-div-group .login-signup-button.logged-in {
     border-radius: 50%;
@@ -241,4 +242,35 @@ body {
 .login-realign{
     justify-content: flex-end;
     margin-right: 24px;
+}
+
+.profilePopUp{
+    display: flex;
+    flex-direction: column;
+    border: #1DBDC5 2px solid;
+    border-radius: 10px;
+    width: 350px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+}
+.profilePopUp .userInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
+.profilePopUp .userInfo .textInfo{
+    display: flex;
+    flex-direction: column;
+}
+.profilePopUp .userInfo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.profilePopUp #signOut{
+    background-color: red;
+    color: white;
+    padding: 20px;
 }

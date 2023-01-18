@@ -78,17 +78,81 @@ loginSignUpBtn.addEventListener("click", (e) => {
                     GoogleAuthProvider.credentialFromError(error);
                 // ...
             });
-    }else{
-      console.log("user trying to open the profile details")
     }
+    // else{
+    //   console.log("user trying to open the profile details")
+    //   const template = document.getElementById('profilePopUpTemplate');
+    //   const templateClone = template.content.cloneNode(true);
+    //   const signOutBtn = templateClone.querySelector('#signOut');
+    //   signOutBtn.addEventListener('click', (e) => {
+    //     signOut(auth).then(() => {
+          // Sign-out successful.
+    //       console.log("signed outed");
+    //     }).catch((error) => {
+          // An error happened.
+    //     });
+    //   })
+    //   console.log(templateClone);
+    //   let loginSignUpBtn = document.querySelector(".login-signup-button");
+    //   // loginSignUpBtn.insertAdjacentElement('beforeend', templateClone)
+    //   if(document.querySelector('.profilePopUp')){
+    //     document.querySelector('.profilePopUp').remove();
+    //   }else{
+    //       loginSignUpBtn.append( templateClone)
+    //   }
+    // }
 });
 
-/* 
 
-signOut(auth).then(() => {
-  // Sign-out successful.
-}).catch((error) => {
-  // An error happened.
-});
+document.querySelector('body').addEventListener('click', (e) => {
+    if(document.contains(document.querySelector("[data-status='loggedIn']"))){
+        // console.log("contains", Math.random());
+        // console.log(e.target.dataset.dataStatus, Math.random())
+        // console.log(e.target)
+        if(e.target.dataset.status === 'loggedIn'){
+            if(document.contains(document.querySelector(".profilePopUp"))){
+                document.querySelector(".profilePopUp").remove();
+            }else{
+                const template = document.getElementById('profilePopUpTemplate');
+                const templateClone = template.content.cloneNode(true);
+                const signOutBtn = templateClone.querySelector('#signOut');
+                signOutBtn.addEventListener('click', (e) => {
+                signOut(auth).then(() => {
+                    const htmlCode = "<span class='material-symbols-outlined account-circle'>account_circle</span><p>Sign in</p>"
+                    document.querySelector("img[data-status='loggedIn']").remove();
+                    delete document.querySelector('.login-signup-button').dataset.status
+                    document.querySelector('.login-signup-button').insertAdjacentHTML('beforeend',htmlCode);
+                    document.querySelector('.login-signup-button').classList.remove('logged-in');
+                    document
+                    .querySelector(".end-div-group")
+                    .classList.remove("login-realign");
+                }).catch((error) => {
+                // An error happened.
+                });
+                })
+                console.log(templateClone);
+                let loginSignUpBtn = document.querySelector(".login-signup-button");
+                loginSignUpBtn.append( templateClone)
+            }
+        }else{
+            if(document.contains(document.querySelector(".profilePopUp"))){
+                document.querySelector('.profilePopUp').remove();
+            }
+        }
+    }
+    // else{
+    //     console.log("does not contains", Math.random());
+    // }
+})
 
-*/
+// document.querySelector('body').addEventListener('click', (e) => {
+    // console.log("this is the pop up modal",e.target.classList.contains('profilePopUp'))
+    // console.log(e.target.classList.contains('profilePopUp'))
+    // console.log(e.target.classList.contains('profilePopUp'))
+    // console.log(e.target.classList.contains('s'))
+    // console.log("condition are",!e.target.classList.contains('profilePopUp') , document.contains(document.querySelector('.profilePopUp')))
+    // if(!e.target.classList.contains('profilePopUp') && document.contains(document.querySelector('.profilePopUp'))){
+        // document.querySelector('.profilePopUp').remove();
+        // console.log("condition are",!e.target.classList.contains('profilePopUp') , document.contains(document.querySelector('.profilePopUp')))
+    // }
+// })
