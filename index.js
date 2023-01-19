@@ -55,8 +55,10 @@ loginSignUpBtn.addEventListener("click", (e) => {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
+
                 let profilePic = document.createElement("img");
                 profilePic.setAttribute("src", `${user["photoURL"]}`);
+                localStorage.setItem('profile', JSON.stringify(user));
                 profilePic.classList.add("profile-img");
                 profilePic.dataset.status = "loggedIn";
                 loginSignUpBtn.dataset.status = "loggedIn";
@@ -107,6 +109,9 @@ document.querySelector('body').addEventListener('click', (e) => {
                 })
                 console.log(templateClone);
                 let loginSignUpBtn = document.querySelector(".login-signup-button");
+                let user = JSON.parse(localStorage.getItem('profile'));
+                const profilePic = templateClone.querySelector('#profileImg')
+                profilePic.setAttribute('src', `${user['photoURL']}`)
                 loginSignUpBtn.append( templateClone)
             }
         }else{

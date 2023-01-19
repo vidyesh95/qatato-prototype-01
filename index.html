@@ -46,145 +46,128 @@
     </section>
     <main id="main-content">
 
-        <div class="profilePopUp">
-            <div class="userInfo">
-                <div class="textInfo">
-                    <span class="name">Vidyseh Churi</span>
-                    <span class="username">@Vidyseh</span>
-                </div>
-                <img src="https://wallpapers.com/images/featured/4co57dtwk64fb7lv.jpg/" alt="">
-            </div>
-            <div class="level-and-checkIn">
-                <h1>Level 1</h1>
-                <div class="checkIn">check in</div>
-            </div>
-            <div class="coins-and-tickets">
-                <div class="coins">
-                    <span class="material-symbols-outlined coinIcon">
-                        monetization_on
-                    </span>
-                    <p>Coins</p>
-                </div>
-                <div class="tickets">
-                    <span class="material-symbols-outlined ticketIcon">
-                        confirmation_number
-                    </span>
-                    <p>Tickets</p>
-                </div>
-            </div>
-            <div class="paidMembershipBanner">
-                <span class="material-symbols-outlined">
-                    workspace_premium
-                </span>
-                <p>Premium membership</p>
-            </div>
-            <div class="listOne">
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        account_box
-                    </span>
-                    <p id="channel">Your Channel</p>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        video_call
-                    </span>
-                    <p id="studio">Creator studio</p>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        switch_account
-                    </span>
-                    <p id="switchAccount">switch account</p>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        logout
-                    </span>
-                    <p id="signOut">Sign out</p>
-                </div>
-            </div>
-            <div class="listTwo">
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        mode_night
-                    </span>
-                    <p>Appearance:Device Theme</p>
-                    <span class="material-symbols-outlined right-arrow">
-                        chevron_right
-                    </span>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        translate
-                    </span>
-                    <p>Language:English(US)</p>
-                    <span class="material-symbols-outlined right-arrow">
-                        chevron_right
-                    </span>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        admin_panel_settings
-                    </span>
-                    <p>Restricted Mode:OFF</p>
-                    <span class="material-symbols-outlined right-arrow">
-                        chevron_right
-                    </span>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        edit_location
-                    </span>
-                    <p>Location:India</p>
-                    <span class="material-symbols-outlined right-arrow">
-                        chevron_right
-                    </span>
-                </div>
-            </div>
-            <div class="listThree">
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        settings
-                    </span>
-                    <p>Settings</p>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        help
-                    </span>
-                    <p>Help</p>
-                </div>
-                <div class="listOption">
-                    <span class="material-symbols-outlined">
-                        rate_review
-                    </span>
-                    <p>Send feedback</p>
-                </div>
-            </div>
-        </div>
+        
 
 
     </main>
 </body>
 <template id="profilePopUpTemplate">
 
-    <div class="profilePopUp">
+    <div class="profilePopUp scrollbar">
         <div class="userInfo">
             <div class="textInfo">
                 <span class="name">Vidyseh Churi</span>
                 <span class="username">@Vidyseh</span>
             </div>
-            <img src="https://wallpapers.com/images/featured/4co57dtwk64fb7lv.jpg/" alt="">
+            <img id="profileImg" src="https://wallpapers.com/images/featured/4co57dtwk64fb7lv.jpg/" alt="">
+        </div>
+        <div class="level-and-checkIn">
+            <h1>Level 1</h1>
+            <div class="checkIn">check in</div>
+        </div>
+        <div class="coins-and-tickets">
+            <div class="coins">
+                <span class="material-symbols-outlined coinIcon">
+                    monetization_on
+                </span>
+                <p>Coins</p>
+            </div>
+            <div class="tickets">
+                <span class="material-symbols-outlined ticketIcon">
+                    confirmation_number
+                </span>
+                <p>Tickets</p>
+            </div>
         </div>
         <div class="paidMembershipBanner">
+            <span class="material-symbols-outlined">
+                workspace_premium
+            </span>
             <p>Premium membership</p>
         </div>
         <div class="listOne">
-            <p id="channel">Your Channel</p>
-            <p id="studio">Creator studio</p>
-            <p id="switchAccount">switch account</p>
-            <p id="signOut">Sign out</p>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    account_box
+                </span>
+                <p id="channel">Your Channel</p>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    video_call
+                </span>
+                <p id="studio">Creator studio</p>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    switch_account
+                </span>
+                <p id="switchAccount">switch account</p>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+                <p id="signOut">Sign out</p>
+            </div>
+        </div>
+        <div class="listTwo">
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    mode_night
+                </span>
+                <p>Appearance:Device Theme</p>
+                <span class="material-symbols-outlined right-arrow">
+                    chevron_right
+                </span>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    translate
+                </span>
+                <p>Language:English(US)</p>
+                <span class="material-symbols-outlined right-arrow">
+                    chevron_right
+                </span>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    admin_panel_settings
+                </span>
+                <p>Restricted Mode:OFF</p>
+                <span class="material-symbols-outlined right-arrow">
+                    chevron_right
+                </span>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    edit_location
+                </span>
+                <p>Location:India</p>
+                <span class="material-symbols-outlined right-arrow">
+                    chevron_right
+                </span>
+            </div>
+        </div>
+        <div class="listThree">
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <p>Settings</p>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    help
+                </span>
+                <p>Help</p>
+            </div>
+            <div class="listOption">
+                <span class="material-symbols-outlined">
+                    rate_review
+                </span>
+                <p>Send feedback</p>
+            </div>
         </div>
     </div>
 </template>
