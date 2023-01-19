@@ -269,8 +269,39 @@ body {
     width: 50px;
     border-radius: 50%;
 }
-.profilePopUp #signOut{
-    background-color: red;
-    color: white;
-    padding: 20px;
+.profilePopUp .level-and-checkIn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
 }
+.profilePopUp .level-and-checkIn h1{
+    color: #1DBDC5;
+    /* margin: 10px; */
+}
+.profilePopUp .level-and-checkIn .checkIn{
+    background-color: #4a91c86d;
+    height: max-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.profilePopUp .listOne,
+.profilePopUp .listTwo,
+.profilePopUp .listThree{
+    padding: 15px 10px;
+    
+}
+
+.profilePopUp .listOption{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.profilePopUp .listTwo .listOption .right-arrow{
+    margin-left: auto;
+
+}
+
+/* dfe3e3 */
