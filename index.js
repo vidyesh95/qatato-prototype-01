@@ -72,15 +72,7 @@ loginSignUpBtn.addEventListener("click", (e) => {
                 // ...
             })
             .catch((error) => {
-                // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // The email of the user's account used.
-                const email = error.customData.email;
-                // The AuthCredential type that was used.
-                const credential =
-                    GoogleAuthProvider.credentialFromError(error);
-                // ...
+                
             });
     }
 });
@@ -143,6 +135,8 @@ document.querySelector('body').addEventListener('click', (e) => {
                 let user = JSON.parse(localStorage.getItem('profile'));
                 const profilePic = templateClone.querySelector('#profileImg')
                 profilePic.setAttribute('src', `${user['photoURL']}`)
+                templateClone.querySelector('[data-user-name]').innerText = user['displayName']
+                templateClone.querySelector('[data-user-email]').innerText = user['email']
                 loginSignUpBtn.append( templateClone)
             }
         }else if(document.querySelector('.profilePopUp').contains(e.target)){
