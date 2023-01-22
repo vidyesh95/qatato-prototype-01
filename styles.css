@@ -81,6 +81,12 @@ body {
     display: grid;
     grid-template-rows: 56px 240px auto;
     grid-template-columns: 80px auto;
+    transition: .4s ease all;
+}
+body.side-rail-open {
+    display: grid;
+    grid-template-rows: 56px 240px auto;
+    grid-template-columns: 360px auto;
 }
 
 #top-app-bar {
@@ -92,7 +98,7 @@ body {
     grid-row-start: 2;
     grid-row-end: 5;
 
-    /* background-color: rebeccapurple; */
+    background-color: rebeccapurple;
 }
 #navrail .material-symbols-outlined.video_call{
     margin: 40px auto;

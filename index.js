@@ -139,7 +139,7 @@ document.querySelector('body').addEventListener('click', (e) => {
                 templateClone.querySelector('[data-user-email]').innerText = user['email']
                 loginSignUpBtn.append( templateClone)
             }
-        }else if(document.querySelector('.profilePopUp').contains(e.target)){
+        }else if(document.querySelector('.profilePopUp')?.contains(e.target)){
             console.log("Hello");
             console.log(e.target)
         }else{
@@ -150,3 +150,7 @@ document.querySelector('body').addEventListener('click', (e) => {
     }
 })
 
+
+document.querySelector('[data-drawer-menu]').addEventListener('click', (e) => {
+    document.querySelector('body').classList.toggle('side-rail-open');
+})
