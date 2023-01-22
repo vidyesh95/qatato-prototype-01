@@ -91,7 +91,65 @@ body {
 #navrail {
     grid-row-start: 2;
     grid-row-end: 5;
+
+    /* background-color: rebeccapurple; */
 }
+#navrail .material-symbols-outlined.video_call{
+    margin: 40px auto;
+    display: block;
+    text-align: center;
+    height: 56px;
+    width: 56px;
+    background-color: #d6e3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    cursor: pointer;
+}
+#navrail .destinations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+#navrail .destinations .material-symbols-outlined{
+    display: block;
+    text-align: center;
+    height: 32px;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    gap: 12px;
+    cursor: pointer;
+}
+#navrail .destinations .icon-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    height: 56px;
+}
+#navrail .destinations .icon-container p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: medium;
+}
+#navrail .destinations .material-symbols-outlined.active{
+    background-color: #CCE8E9;
+}
+
+/* icons size 56 X 56 */
+/* icons size 56 X 32 */
+/* icons size 56 X 32 */
+/* icons size 56 X 32 */
+/* text size 12px medium*/
+/* first vertical gap 40px */
+/* second vertical gap 4px */
+/* height 56px of secondary menus */
 
 #banner-ad {}
 
@@ -200,6 +258,7 @@ body {
     padding: 8px 8px;
     box-sizing: content-box;
     color: #041F21;
+    cursor: pointer;
 }
 .search{
     padding: 8px 16px;
