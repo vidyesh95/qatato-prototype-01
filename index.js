@@ -6,6 +6,8 @@ import {
     GoogleAuthProvider,
     signInWithPopup,
     signOut,
+    setPersistence,
+    onAuthStateChanged  
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -83,10 +85,38 @@ loginSignUpBtn.addEventListener("click", (e) => {
     }
 });
 
+onAuthStateChanged(auth, (user) => {
+    if(user) {
+        console.log("user is signed in")
+        let profileImg = document.querySelector(".account-circle");
+        let profileName = loginSignUpBtn.querySelector("p");
+        profileImg.remove();
+        profileName.remove();
+        loginSignUpBtn.classList.add("logged-in");
+        let profilePic = document.createElement("img");
+        profilePic.setAttribute("src", `${user["photoURL"]}`);
+        localStorage.setItem('profile', JSON.stringify(user));
+        profilePic.classList.add("profile-img");
+        profilePic.dataset.status = "loggedIn";
+        loginSignUpBtn.dataset.status = "loggedIn";
+        console.log(profilePic);
+        document
+            .querySelector(".end-div-group")
+            .classList.add("login-realign");
+        loginSignUpBtn.insertAdjacentElement("afterbegin", profilePic);
+    }else{
+        console.log("user is signed out")
+    }
+})
+
 
 document.querySelector('body').addEventListener('click', (e) => {
     if(document.contains(document.querySelector("[data-status='loggedIn']"))){
         if(e.target.dataset.status === 'loggedIn'){
+            console.log(e.target);
+            console.log(document.querySelector('.profilePopUp'));
+            // console.log(document.querySelector('.profilePopUp').contains(e.target))
+            // if(document.contains(document.querySelector(".profilePopUp")) && !document.querySelector('.profilePopUp').contains(e.target)){
             if(document.contains(document.querySelector(".profilePopUp"))){
                 document.querySelector(".profilePopUp").remove();
             }else{
@@ -103,6 +133,7 @@ document.querySelector('body').addEventListener('click', (e) => {
                         document
                         .querySelector(".end-div-group")
                         .classList.remove("login-realign");
+                        document.querySelector('.profilePopUp').remove()
                     }).catch((error) => {
                     // An error happened.
                     });
@@ -114,6 +145,9 @@ document.querySelector('body').addEventListener('click', (e) => {
                 profilePic.setAttribute('src', `${user['photoURL']}`)
                 loginSignUpBtn.append( templateClone)
             }
+        }else if(document.querySelector('.profilePopUp').contains(e.target)){
+            console.log("Hello");
+            console.log(e.target)
         }else{
             if(document.contains(document.querySelector(".profilePopUp"))){
                 document.querySelector('.profilePopUp').remove();
