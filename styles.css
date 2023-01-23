@@ -141,25 +141,27 @@ body.side-rail-open #navrail [data-video-call] [data-video-call-text]{
 }
 #navrail .destinations .material-symbols-outlined{
     display: block;
-    text-align: center;
+    /* text-align: center; */
     height: 32px;
     /* width: 56px; */
-    width: 100%;
-    padding: 16px 16px;
-    display: flex;
+    /* width: 100%; */
+    padding: 4px 16px;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     border-radius: 16px;
     gap: 12px;
+    width: 100%;
     cursor: pointer;
 }
 #navrail .destinations .icon-container{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 4px; */
     cursor: pointer;
     height: 56px;
-    align-items: center;
+    /* align-items: center; */
+    width: 70%;
 }
 #navrail .destinations .icon-container p {
     text-align: center;
@@ -183,6 +185,9 @@ body.side-rail-open #navrail .destinations .icon-container.active{
 }
 body.side-rail-open #navrail .destinations .icon-container .material-symbols-outlined{
     width: max-content;
+}
+#navrail .destinations .icon-container.active .material-symbols-outlined{
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 /* icons size 56 X 56 */
