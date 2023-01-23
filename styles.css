@@ -395,6 +395,7 @@ body.side-rail-open #navrail .destinations .icon-container .material-symbols-out
     box-sizing: content-box;
     height: 666px;
     overflow: auto;
+    z-index: 10;
 }
 .profilePopUp .userInfo{
     display: flex;
